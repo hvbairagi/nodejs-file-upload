@@ -21,7 +21,7 @@ var upload = multer({
       callback(null, false);
     }
   },
-  limits: { fileSize: 1024 * 1024 * 2 },
+  limits: { fileSize: 1024 * 1024 * 2 }, //2 MB
 });
 
 module.exports = upload;

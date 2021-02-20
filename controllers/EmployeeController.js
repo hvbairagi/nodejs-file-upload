@@ -7,7 +7,7 @@ const index = (req, res, next) => {
       res.json({ response });
     })
     .catch((error) => {
-      res.json({ message: "An error occured!" });
+      res.json({ message: "An error occurred!" });
     });
 };
 
@@ -19,7 +19,7 @@ const show = (req, res, next) => {
       res.json({ response });
     })
     .catch((error) => {
-      res.json({ message: "An error occured!" });
+      res.json({ message: "An error occurred!" });
     });
 };
 
@@ -38,15 +38,15 @@ const store = (req, res, next) => {
       path = path + files.path + ",";
     });
     path = path.substring(0, path.lastIndexOf(","));
-    employee.avatar = path;
+    employee.file = path;
   }
   employee
     .save()
     .then((response) => {
-      res.json({ message: "Employee added succesfully!" });
+      res.json({ message: "Employee added successfully!" });
     })
     .catch((error) => {
-      res.json({ message: "An error occured!" });
+      res.json({ message: "An error occurred!" });
     });
 };
 
@@ -67,7 +67,7 @@ const update = (req, res, next) => {
       res.json({ message: "Employee updated successfully!" });
     })
     .catch((error) => {
-      res.json({ message: "An error occured!" });
+      res.json({ message: "An error occurred!" });
     });
 };
 
@@ -79,7 +79,7 @@ const destroy = (req, res, next) => {
       res.json({ message: "Employee deleted successfully!" });
     })
     .catch((error) => {
-      res.json({ message: "An error occured!" });
+      res.json({ message: "An error occurred!" });
     });
 };
 
